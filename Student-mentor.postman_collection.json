@@ -14,7 +14,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"Bulbul\",\n    \"email\": \"Bulbul@example.com\"\n}",
+					"raw": "{\n    \"name\": \"hahaha\",\n    \"email\": \"hahahah@example.com\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -22,12 +22,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5001/api/mentors/create-mentor",
-					"protocol": "http",
+					"raw": "https://guvi-student-mentor.onrender.com/api/mentors/create-mentor",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"guvi-student-mentor",
+						"onrender",
+						"com"
 					],
-					"port": "5001",
 					"path": [
 						"api",
 						"mentors",
@@ -44,21 +45,16 @@
 				"method": "POST",
 				"header": [],
 				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"name\": \"Trisha\",\n  \"email\": \"Trisha@example.com\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"mode": "urlencoded",
+					"urlencoded": []
 				},
 				"url": {
-					"raw": "http://localhost:5001/api/students/create-student",
-					"protocol": "http",
+					"raw": "guvi-student-mentor.onrender.com/api/students/create-student",
 					"host": [
-						"localhost"
+						"guvi-student-mentor",
+						"onrender",
+						"com"
 					],
-					"port": "5001",
 					"path": [
 						"api",
 						"students",
@@ -84,12 +80,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5001/api/mentors//assign-students",
-					"protocol": "http",
+					"raw": "https://guvi-student-mentor.onrender.com/api/mentors//assign-students",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"guvi-student-mentor",
+						"onrender",
+						"com"
 					],
-					"port": "5001",
 					"path": [
 						"api",
 						"mentors",
@@ -116,12 +113,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5001/api/students/change-mentor",
-					"protocol": "http",
+					"raw": "https://guvi-student-mentor.onrender.com/api/students/change-mentor",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"guvi-student-mentor",
+						"onrender",
+						"com"
 					],
-					"port": "5001",
 					"path": [
 						"api",
 						"students",
@@ -150,12 +148,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5001/api/mentors/getStudents",
-					"protocol": "http",
+					"raw": "https://guvi-student-mentor.onrender.com/api/mentors/getStudents",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"guvi-student-mentor",
+						"onrender",
+						"com"
 					],
-					"port": "5001",
 					"path": [
 						"api",
 						"mentors",
@@ -184,12 +183,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5001/api/students/previous-mentor",
-					"protocol": "http",
+					"raw": "https://guvi-student-mentor.onrender.com/api/students/previous-mentor",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"guvi-student-mentor",
+						"onrender",
+						"com"
 					],
-					"port": "5001",
 					"path": [
 						"api",
 						"students",
