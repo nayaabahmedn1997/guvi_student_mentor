@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "649324ea-7211-4be7-bfc4-3d5102b8e730",
+		"name": "Student-mentor",
+		"description": "### Tasks Overview\n\n1. **Create Mentor API**  \n    API to add a mentor to the database.\n    \n2. **Create Student API**  \n    API to add a student to the database.\n    \n3. **Assign Students to a Mentor API**\n    \n    - Allow selecting one mentor and assigning multiple students.\n        \n    - Ensure students already assigned a mentor don’t show up in the list.\n        \n4. **Change Mentor for a Student API**\n    \n    - Reassign a student to a different mentor.\n        \n5. **View All Students for a Mentor API**\n    \n    - Show all students assigned to a specific mentor.\n        \n6. **Show Previous Mentor for a Student API**\n    \n    - Display the previously assigned mentor for a student.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32078563"
+	},
+	"item": [
+		{
+			"name": "Create menotr",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Bulbul\",\n    \"email\": \"Bulbul@example.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/mentors/create-mentor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"mentors",
+						"create-mentor"
+					]
+				},
+				"description": "1. **Create Mentor API**  \n    API to add a mentor to the database."
+			},
+			"response": []
+		},
+		{
+			"name": "Create a student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Trisha\",\n  \"email\": \"Trisha@example.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/students/create-student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"students",
+						"create-student"
+					]
+				},
+				"description": "1. **Create Student API**  \n    API to add a student to the database."
+			},
+			"response": []
+		},
+		{
+			"name": "Assign students to mentor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"mentorId\": \"6770b3399f9eb62599afb633\",\n  \"studentIds\": [\"6770b0dccd02bf43e7f58d58\", \"6770b35a9f9eb62599afb635\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/mentors//assign-students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"mentors",
+						"",
+						"assign-students"
+					]
+				},
+				"description": "1. **Assign Students to a Mentor API**\n    \n    - Allow selecting one mentor and assigning multiple students.\n        \n    - Ensure students already assigned a mentor don’t show up in the list."
+			},
+			"response": []
+		},
+		{
+			"name": "Change mentor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"newMentorId\": \"6770b79286ec23775e743e50\",\n  \"studentId\": \"6770b35a9f9eb62599afb635\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/students/change-mentor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"students",
+						"change-mentor"
+					]
+				},
+				"description": "1. **Change Mentor for a Student API**\n    \n    - Reassign a student to a different mentor."
+			},
+			"response": []
+		},
+		{
+			"name": "Get studenst under a mentor",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"mentorId\":\"6770b79286ec23775e743e50\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/mentors/getStudents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"mentors",
+						"getStudents"
+					]
+				},
+				"description": "1. **View All Students for a Mentor API**\n    \n    - Show all students assigned to a specific mentor."
+			},
+			"response": []
+		},
+		{
+			"name": "get previous mentor of a particular student",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \n  \"studentId\": \"6770b35a9f9eb62599afb635\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/students/previous-mentor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"students",
+						"previous-mentor"
+					]
+				},
+				"description": "1. **Show Previous Mentor for a Student API**\n    \n    - Display the previously assigned mentor for a student."
+			},
+			"response": []
+		}
+	]
+}
